@@ -1,5 +1,8 @@
 # try-continue
 
+[![crates.io](https://img.shields.io/crates/v/try-continue)](https://crates.io/crates/try_continue)
+[![docs.rs](https://img.shields.io/docsrs/try-continue)](https://docs.rs/try-continue/)
+
 `try-continue` provides one method, [`try_continue`](`https://docs.rs/try-continue/0.1.0/try_continue/trait.TryContinue.html#method.try_continue`),
 which allows you to work with iterators of type `Result<T, _>`, as if they were
 simply iterators of type `T`. this is is implemented for all iterators providing
