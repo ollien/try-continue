@@ -1,0 +1,17 @@
+name: Release
+on:
+  release:
+    types: [published]
+
+jobs:
+  publish:
+    name: Publish to crates.io
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+      - uses: katyo/publish-crates@5cb50445e250bfeb7f823f4785be2de044f4ba7a
+        with:
+          registry-token: ${{ secrets.CARGO_TOKEN }}

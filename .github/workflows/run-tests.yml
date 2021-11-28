@@ -1,0 +1,16 @@
+name: Run Tests
+on: [push, pull_request]
+
+jobs:
+  test:
+    name: Run Tests
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+      - name: build
+        run: cargo check
+      - run: cargo clippy --tests
+      - run: cargo test
