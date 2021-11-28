@@ -1,6 +1,6 @@
 # try-continue
 
-`try-continue` provides one method, [`try_continue`](`TryContinue::try_continue`),
+`try-continue` provides one method, [`try_continue`](`https://docs.rs/try-continue/0.1.0/try_continue/trait.TryContinue.html#method.try_continue`),
 which allows you to work with iterators of type `Result<T, _>`, as if they were
 simply iterators of type `T`. this is is implemented for all iterators providing
 a `Result`. This is particularly useful if you need to map to a fallible function,
